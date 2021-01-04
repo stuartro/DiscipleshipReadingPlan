@@ -1,0 +1,20 @@
+#!/usr/bin/env osascript -l JavaScript
+"use strict";
+
+var Things = (function () {
+    var instance;
+    function init() {
+        return Application("Things");
+    }
+    return {
+        getInstance: function () {
+            if (!instance) {
+                instance = init();
+                instance.includeStandardAdditions = true;
+            }
+            return instance;
+        }
+    };
+})();
+
+console.log(Things.projects());
