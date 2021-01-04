@@ -1,22 +1,35 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "ThingsDiscipleship",
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "ThingsDiscipleship",
-            dependencies: []),
-        .testTarget(
-            name: "ThingsDiscipleshipTests",
-            dependencies: ["ThingsDiscipleship"]),
-    ]
+   name: "ThingsBible",
+   
+   platforms: [
+      .macOS(.v10_15)
+   ],
+   
+   products: [
+      .library(
+         name: "ThingsBibleLib",
+         targets: ["ThingsBibleLib"]),
+      
+      .executable(
+         name: "thingsBible",
+         targets: ["thingsBible"]),
+   ],
+   
+   dependencies: [
+      .package(url: "https://github.com/apple/swift-argument-parser", from: "0.1.0"),
+   ],
+   
+   targets: [
+      .target(
+         name: "ThingsBibleLib",
+         dependencies: []),
+      
+      .target(name: "thingsBible",
+              dependencies: ["ArgumentParser", "ThingsBibleLib"]),
+   ]
 )

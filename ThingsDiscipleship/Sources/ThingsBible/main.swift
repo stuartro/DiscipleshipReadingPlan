@@ -1,5 +1,6 @@
 import Foundation
 import Cocoa
+import ThingsBibleLib
 
 func accordanceURL(for refs: [String]) -> String {
    var references = ""

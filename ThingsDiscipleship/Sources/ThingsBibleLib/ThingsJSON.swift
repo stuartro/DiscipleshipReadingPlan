@@ -359,7 +359,7 @@ public class TJSProject : TJSModelItem, Codable {
     }
 
     /// Create and return a new project configured with the provided values.
-    init(operation: Operation = .create,
+    public init(operation: Operation = .create,
          id: String? = nil,
          title: String? = nil,
          notes: String? = nil,

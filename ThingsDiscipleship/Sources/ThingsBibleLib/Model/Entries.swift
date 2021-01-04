@@ -323,4 +323,4 @@ let december = Month(name: "December", days: [
    Day(num: "25", refs: ["John 21:15-25", "Rev 22", "Job 42", "Mal 1-4"])
 ])
 
-let months = [january, february, march, april, may, june, july, august, sept, oct, november, december]
+public let months = [january, february, march, april, may, june, july, august, sept, oct, november, december]
