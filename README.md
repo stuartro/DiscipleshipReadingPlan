@@ -41,7 +41,11 @@ Shown below is the result of pasting the ESVS Markdown file into DEVONthink:
 
 Of course, any Markdown viewer that supports hyperlinks will do.
 
-Clicking on the hyperlinks opens Accordance to the correct passage. The first hyperlink for each “day” opens all four readings, while clicking the “individual” hyperlinks opens only the particular reading.
+Clicking on the hyperlinks opens Accordance to the correct passage. The first hyperlink for each “day” opens all four readings, while clicking the “individual” hyperlinks opens only the particular reading. Shown below is the result of clicking on the “combined / all-4 readings” hyperlink for day 1 in January:
+
+<p align="center">
+  <img src="resources/AccordanceScreenshot1.png" width="300" />
+</p>
 
 ### Create a Bible-reading project in Things 3
 ```lang-shell
