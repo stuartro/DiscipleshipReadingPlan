@@ -39,6 +39,10 @@ Shown below is the result of pasting the ESVS Markdown file into DEVONthink:
   <img src="resources/ESVReadingPlan_shown_in_DEVONthink.png" width="300" />
 </p>
 
+Of course, any Markdown viewer that supports hyperlinks will do.
+
+Clicking on the hyperlinks opens Accordance to the correct passage. The first hyperlink for each “day” opens all four readings, while clicking the “individual” hyperlinks opens only the particular reading.
+
 ### Create a Bible-reading project in Things 3
 ```lang-shell
 TRANSLATION=ESVS # Or KJVS, NLT-SE, etc.
@@ -57,3 +61,7 @@ Running the above command generates a project in Things 3 as shown below:
   <img src="resources/ThingsScreenshot1.png" width="300" />
   <img src="resources/ThingsScreenshot2.png" width="300" />
 </p>
+
+As with the Markdown files, clicking on the hyperlinks opens Accordance to the correct passage. The first hyperlink for each “day” opens all four readings, while clicking the “individual” hyperlinks opens only the particular reading.
+
+Each task in the generated project contains a checklist for the 4 readings for the particular “day”.
