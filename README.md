@@ -14,20 +14,6 @@ swift build -c release
 cp .build/release/bibleReading  /usr/local/bin
 ```
 
-## Binary
-
-If you are unable to build the binary for some reason (e.g. don’t have Xcode), a [pre-built binary](bin/bibleReading) is available. Binary MD5 checksum is `aac0a490fcbb487b0c756f2ad7df1790`. You can ensure that the binary you download is the same as the one I uploaded by running the following command in a terminal:
-
-```lang-shell
-md5 bibleReading
-```
-
-If all is good, you should see:
-
-```lang-text
-MD5 (bibleReading) = aac0a490fcbb487b0c756f2ad7df1790
-```
-
 ## Usage
 
 ### Generate a Markdown file
@@ -41,6 +27,14 @@ TRANSLATION=ESVS # Or KJVS, NLT-SE, etc.
               --start-month 1 \
               --end-month 12 > readingPlans/discipleShipReadingPlan_ESVS.md
 ```
+
+#### Pre-generated Markdown files
+
+See [readingPlans](readingPlans/) for a few pre-generated Markdown files. If you are unable to build (e.g. don’t have Xcode, etc.) and want some other translation included, please let me know and I will generate additonal Markdown file/s.
+
+Shown below is the result of pasting the ESVS Markdown file into DEVONthink:
+
+![ESV Reading plan shown in DEVONthink](resources/ESVReadingPlan_shown_in_DEVONthink.png)
 
 ### Create a Bible-reading project in Things 3
 ```lang-shell
