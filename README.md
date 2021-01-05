@@ -8,9 +8,24 @@ A small Swift-based utility to generate the Discipleship Bible Reading Plan in a
 ## Building
 
 ```lang-shell
-git clone 
+git clone https://github.com/stuartro/DiscipleshipReadingPlan.git
+cd DiscipleshipReadingPlan
 swift build -c release
 cp .build/release/bibleReading  /usr/local/bin
+```
+
+## Binary
+
+If you are unable to build the binary for some reason (e.g. don’t have Xcode), a [pre-built binary](bin/bibleReading) is available. Binary MD5 checksum is `aac0a490fcbb487b0c756f2ad7df1790`. You can ensure that the binary you download is the same as the one I uploaded by running the following command in a terminal:
+
+```lang-shell
+md5 bibleReading
+```
+
+If all is good, you should see:
+
+```lang-text
+MD5 (bibleReading) = aac0a490fcbb487b0c756f2ad7df1790
 ```
 
 ## Usage
@@ -31,7 +46,7 @@ TRANSLATION=ESVS # Or KJVS, NLT-SE, etc.
 ```lang-shell
 TRANSLATION=ESVS # Or KJVS, NLT-SE, etc.
 
-bibleReading \
+/usr/local/bin/bibleReading \
               createThingsProject \
               --project-name "Bible Reading" \
               --bible-name-code "$TRANSLATION" \
