@@ -1,9 +1,10 @@
 # Discipleship Bible Reading Plan
 
-A small Swift-based utility to generate the Discipleship Bible Reading Plan in a variety of formats. Currently supported are:
+A small Swift-based utility to generate the [Discipleship Bible Reading Plan](https://www.navigators.org/resource/bible-reading-plans) in a variety of formats *with hyperlinks to passages in [Accordance](https://www.accordancebible.com/)*. Currently supported are:
 
-- Generation of Markdown file/s containing hyperlinks to Accordance Bible Software (on either macOS or Windows)
-- Creation of a Things 3 project containing todo’s (with checklist for each passage to read) with hyperlinks to the relevant passage/s in Accordance Bible Software.
+- Generation of Markdown file/s containing hyperlinks to [Accordance Bible Software](https://www.accordancebible.com/) (on either macOS or Windows)
+
+- Creation of a [Things 3](https://culturedcode.com/things/) project containing todo’s (with checklist for each passage to read) with hyperlinks to the relevant passage/s in Accordance Bible Software.
 
 ## Building
 
