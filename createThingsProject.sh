@@ -12,4 +12,4 @@ TRANSLATION=ESVS
               --project-name "Bible Reading" \
               --bible-name-code "$TRANSLATION" \
               --start-month 1 \
-              --end-month 1
+              --end-month 12
