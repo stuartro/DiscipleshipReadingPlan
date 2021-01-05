@@ -41,6 +41,6 @@ bibleReading \
 
 Running the above command generates a project in Things 3 as shown below:
 
-![Project created in Things](./ThingsScreenshot1.png)
+![Project created in Things](resources/ThingsScreenshot1.png)
 
-![Hyperlinks in Things tasks](./ThingsScreenshot2.png)
+![Hyperlinks in Things tasks](resources/ThingsScreenshot2.png)
