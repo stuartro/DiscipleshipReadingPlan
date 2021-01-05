@@ -32,5 +32,9 @@ let package = Package(
       
       .target(name: "bibleReading",
               dependencies: ["ArgumentParser", "BibleReadingLib"]),
+      
+      .testTarget(
+         name: "BibleReadingLibTests",
+         dependencies: ["Regex", "BibleReadingLib"]),
    ]
 )

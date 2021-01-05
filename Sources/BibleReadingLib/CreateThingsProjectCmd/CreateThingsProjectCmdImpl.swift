@@ -2,7 +2,7 @@ import Foundation
 import Cocoa
 import Regex
 
-public class CreateThingsProjectCmdImpl {
+public class CreateThingsProjectCmdImpl: AbstractCmdImpl {
    private let args: CreateThingsProjectCmd
    
    public init(args: CreateThingsProjectCmd) {
@@ -23,10 +23,10 @@ public class CreateThingsProjectCmdImpl {
             //      2. [Heb 1:1-9](accord://read/ESVS?Heb_1:1-9)
             //      3. [Prov 18](accord://read/ESVS?Prov_18)
             //      4. [Isa 1-2](accord://read/ESVS?Isa_1-2)
-            var notes = "∙ \(label(for: day.refs))\n   \(accordanceURL(for: day.refs))\n"
+            var notes = "∙ \(label(for: day.refs))\n   \(accordanceURL(for: day.refs, withBible: args.bibleNameCode))\n"
             for ref in day.refs {
                checklistItems.append(TJSChecklistItem(title: ref))
-               notes += "\n∙ \(label(for: [ref]))\n   \(accordanceURL(for: [ref]))"
+               notes += "\n∙ \(label(for: [ref]))\n   \(accordanceURL(for: [ref], withBible: args.bibleNameCode, singleRef: true))"
             }
             
             projectItems.append(.todo(TJSTodo(title: "\(month.shortName) ∙ \(day.num)",
@@ -55,39 +55,6 @@ public class CreateThingsProjectCmdImpl {
       catch {
          print("ERROR: \(error.localizedDescription)")
       }
-   }
-   
-   // MARK: - PRIVATE FUNCTIONS
-   private func accordanceURL(for refs: [String]) -> String {
-      var references = ""
-      for (idx, ref) in refs.enumerated() {
-         var fullRef = ref
-         if !fullRef.contains(":") && !fullRef.contains("-"){
-            let regex = try! Regex(pattern: ".*([0-9]+)$")
-            if let match = regex.findFirst(in: fullRef) {
-               let chapterNum = match.group(at: 1)
-               fullRef += "-\(chapterNum!)"
-            } else {
-               fullRef += ":1-999"
-            }
-         }
-         references += fullRef.replacingOccurrences(of: " ", with: "_")
-         if idx < refs.count - 1 {
-            references += ","
-         }
-      }
-      return "accord://read/\(args.bibleNameCode)?" + references
-   }
-   
-   private func label(for refs: [String]) -> String {
-      var label = ""
-      for (idx, ref) in refs.enumerated() {
-         label += ref
-         if idx < refs.count - 1 {
-            label += ", "
-         }
-      }
-      return label
    }
 }
 
