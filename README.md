@@ -35,7 +35,7 @@ See [readingPlans](readingPlans/) for a few pre-generated Markdown files. If you
 Shown below is the result of pasting the ESVS Markdown file into DEVONthink:
 
 <p align="center">
-  <img src="resources/ESVReadingPlan_shown_in_DEVONthink.png" width="256" />
+  <img src="resources/ESVReadingPlan_shown_in_DEVONthink.png" width="300" />
 </p>
 
 ### Create a Bible-reading project in Things 3
@@ -53,6 +53,6 @@ TRANSLATION=ESVS # Or KJVS, NLT-SE, etc.
 Running the above command generates a project in Things 3 as shown below:
 
 <p align="center">
-  <img src="resources/ThingsScreenshot1.png" width="256" />
-  <img src="resources/ThingsScreenshot2.png" width="256" />
+  <img src="resources/ThingsScreenshot1.png" width="300" />
+  <img src="resources/ThingsScreenshot2.png" width="300" />
 </p>
