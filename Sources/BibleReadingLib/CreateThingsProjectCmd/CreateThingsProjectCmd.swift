@@ -12,8 +12,11 @@ public struct CreateThingsProjectCmd: ParsableCommand {
    @Option(help: "Name of the project (in Things) to be created")
    public var projectName: String
    
-   @Option(help: "The short-code (e.g. 'ESVS' for ESV with Strongs, etc.) in which you want to do your Bible reading")
-   public var bibleNameCode: String = "ESVS"
+   @Option(help: "The Accordance short-code (e.g. 'ESVS' for ESV with Strongs, etc.) in which you want to do your Bible reading")
+   public var bibleNameCodeAccord: String = "ESVS"
+
+   @Option(help: "The Logos short-code (e.g. 'ESV' for ESV) in which you want to do your Bible reading")
+   public var bibleNameCodeLogos: String = "ESV"
    
    @Option(help: "One-based integer representing the month to start with (e.g. 1 = January, 2 = February, etc.)")
    public var startMonth: Int = 1

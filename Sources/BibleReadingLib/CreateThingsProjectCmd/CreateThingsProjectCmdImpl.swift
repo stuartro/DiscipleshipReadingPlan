@@ -23,10 +23,18 @@ public class CreateThingsProjectCmdImpl: AbstractCmdImpl {
             //      2. [Heb 1:1-9](accord://read/ESVS?Heb_1:1-9)
             //      3. [Prov 18](accord://read/ESVS?Prov_18)
             //      4. [Isa 1-2](accord://read/ESVS?Isa_1-2)
-            var notes = "∙ \(label(for: day.refs))\n   \(accordanceURL(for: day.refs, withBible: args.bibleNameCode))\n"
+            var notes = "∙ \(label(for: day.refs))"
+            + "\n  - \(accordanceURL(for: day.refs, withBible: args.bibleNameCodeAccord))"
+//            + "\n"
+            + "\n  - \(logosURL(for: day.refs, withBible: args.bibleNameCodeLogos))"
+            + "\n"
             for ref in day.refs {
                checklistItems.append(TJSChecklistItem(title: ref))
-               notes += "\n∙ \(label(for: [ref]))\n   \(accordanceURL(for: [ref], withBible: args.bibleNameCode, singleRef: true))"
+               notes += "\n∙ \(label(for: [ref]))"
+               + "\n  - \(accordanceURL(for: [ref], withBible: args.bibleNameCodeAccord, singleRef: true))"
+//               + "\n"
+               + "\n  - \(logosURL(for: [ref], withBible: args.bibleNameCodeLogos, singleRef: true))"
+               + "\n"
             }
             
             projectItems.append(.todo(TJSTodo(title: "\(month.shortName) ∙ \(day.num)",
